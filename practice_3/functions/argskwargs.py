@@ -11,4 +11,4 @@ def print_info(**kwargs):
         print(key, "=", val)
 
 print(sum_numbers(1, 2, 3, 4))
-print_info(name="Anna", age=22)
+print_info(name="Dino", age=22)

@@ -10,5 +10,5 @@ class Account:
         self.money += amount
         print("New balance:", self.money)
 
-acc = Account("John", 100)
+acc = Account("Dino", 100)
 acc.add_money(50)

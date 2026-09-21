@@ -9,8 +9,8 @@ class Animal:
 class Dog(Animal):
 
     def bark(self):
-        print("Woof!")
+        print("gaf!")
 
-d = Dog("Rex")
+d = Dog("aqtos")
 d.make_sound()
 d.bark()

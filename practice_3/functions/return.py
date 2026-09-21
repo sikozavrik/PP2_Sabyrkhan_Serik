@@ -4,7 +4,7 @@ def add(a, b):
     return a + b
 
 def get_user():
-    name = "John"
+    name = "Dino"
     age = 20
     return name, age
 
