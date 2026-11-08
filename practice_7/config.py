@@ -1,7 +1,7 @@
 load_config = {
     "host": "localhost",
-    "database": "phonebook_db",
+    "database": "phonebook",
     "user": "postgres",
-    "password": "your_password",
+    "password": "SSSSS01012008.",
     "port": "5432"
 }
