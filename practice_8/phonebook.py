@@ -21,10 +21,12 @@ def upsert_contact(name, phone):
 def bulk_insert_contacts(names, phones):
     conn = get_connection()
     cur = conn.cursor()
-    cur.execute("CALL bulk_insert_contacts(%s, %s);", (names, phones))
+    cur.execute("CALL bulk_insert_contacts(%s, %s, NULL);", (names, phones))
+    invalid = cur.fetchone()[0]
     conn.commit()
     cur.close()
     conn.close()
+    return invalid
 
 def get_paginated_contacts(limit, offset):
     conn = get_connection()
@@ -49,7 +51,7 @@ if __name__ == "__main__":
     
     names = ["Siko", "Serik", "Sikozavr"]
     phones = ["+77029876543", "+77071112233", "invalid_phone"]
-    bulk_insert_contacts(names, phones)
+    print("Invalid:", bulk_insert_contacts(names, phones))
     
     print("Paginated records:", get_paginated_contacts(2, 0))
     delete_contact("Dino")
