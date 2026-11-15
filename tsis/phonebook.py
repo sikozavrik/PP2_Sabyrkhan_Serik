@@ -11,8 +11,8 @@ from datetime import date
 
 import psycopg2
 
-from config import PAGE_SIZE, PAGINATION_FUNCTION
-from connect import get_connection
+from tsis.config import PAGE_SIZE, PAGINATION_FUNCTION
+from tsis.connect import get_connection
 
 PHONE_TYPES = ("home", "work", "mobile")
 

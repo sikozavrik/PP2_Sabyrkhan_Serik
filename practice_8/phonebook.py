@@ -1,5 +1,5 @@
 import psycopg2
-from connect import get_connection
+from tsis.connect import get_connection
 
 def search_contacts(pattern):
     conn = get_connection()

@@ -1,6 +1,6 @@
 import csv
 import psycopg2
-from connect import get_connection, create_tables
+from tsis.connect import get_connection, create_tables
 
 def add_contact_console():
     name = input("Enter name (e.g., Dino, Siko, Sikosavr, Serik): ").strip()
