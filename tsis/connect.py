@@ -1,7 +1,9 @@
 import psycopg2
-from tsis.config import DB_CONFIG
+from config import DB_CONFIG  
+
 def get_connection():
     return psycopg2.connect(**DB_CONFIG)
+
 if __name__ == "__main__":
     try:
         conn = get_connection()
